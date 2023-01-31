@@ -6,6 +6,6 @@ Etch-A-Sketch - The Odin Project Foundations
 
 - External Code
     - [Normalize.css v8.0.1](https://necolas.github.io/normalize.css/)
-    - [Font Awesome <cdnjs>](https://cdnjs.com/libraries/font-awesome)
+    - [Font Awesome \<cdnjs\>](https://cdnjs.com/libraries/font-awesome)
 
 - [Live Demo](https://cert-ready.github.io/etch-a-sketch/)
