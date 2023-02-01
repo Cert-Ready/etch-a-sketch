@@ -78,6 +78,7 @@ footer {
   aspect-ratio: 1 / 1;
   margin: auto;
   outline: 2px solid var(--dark-0);
+  cursor: crosshair;
 }
 
 /* style range input
