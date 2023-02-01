@@ -26,9 +26,9 @@
   /* color */
   --light-0: hsl(210, 17%, 98%);
   --dark-0: hsl(216, 16%, 6%);
-  --accent-0: #0081a7;
-  --accent-1: #fdfcdc;
-  --accent-2: #f07167;
+  --accent-0: hsl(194, 100%, 33%);
+  --accent-1: hsl(58, 89%, 93%);
+  --accent-2: hsl(4, 82%, 67%);
   --pri-grad: linear-gradient(45deg, var(--accent-1), var(--accent-0), var(--accent-2));
   /* miscellaneous */
   --pri-brd-rad: var(--size-1);
