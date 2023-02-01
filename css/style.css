@@ -29,7 +29,7 @@
   --accent-0: #0081a7;
   --accent-1: #fdfcdc;
   --accent-2: #f07167;
-  --pri-grad: linear-gradient(45deg, var(--accent-0), var(--accent-1) 30%, var(--accent-2));
+  --pri-grad: linear-gradient(45deg, var(--accent-1), var(--accent-0), var(--accent-2));
   /* miscellaneous */
   --pri-brd-rad: var(--size-1);
   --pri-outline-offset: 2px;
@@ -47,6 +47,7 @@ body {
   font-family: var(--sec-font);
   background-color: var(--accent-1);
   background-image: var(--pri-grad);
+  color: var(--accent-1);
 }
 
 header,
@@ -74,7 +75,7 @@ footer {
 .canvas {
   display: grid;
   width: 90%;
-  aspect-ratio: 1 / 0.7;
+  aspect-ratio: 1 / 1;
   margin: auto;
   outline: 1px solid var(--accent-0);
   border-radius: var(--pri-brd-rad);
@@ -178,6 +179,7 @@ footer {
   outline: var(--pri-outline-offset) solid var(--accent-0);
 }
 
+
 /* Utility class
    ========================================================================== */
 .flex-row {
@@ -196,5 +198,8 @@ footer {
 @media (min-width: 768px) {
   .controls * {
     margin: var(--size-1);
+  }
+  .canvas {
+    aspect-ratio: 1 / 0.7;
   }
 }
