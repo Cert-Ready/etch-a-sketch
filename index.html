@@ -1,17 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Etch-A-Sketch</title>
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
     <div class="wrapper">
+      <header>
         <h1 class="hero">Etch-A-Sketch</h1>
+        <div class="controls">
+          <div class="">
+            <p>Color:</p>
+            <button class="buttonV01">Classic</button>
+            <button class="buttonV01">Modern</button>
+            <button class="buttonV01">Rainbow</button>
+          </div>
+          <button class="buttonV01">Clear</button>
+          <div>
+            <label for="grid-slider">
+              Grid Size: <span class="grid-size"></span> : <span class="grid-size"></span>
+            </label>
+            <br />
+            <input type="range" name="grid-slider" id="grid-slider" min="1" max="100" value="16" />
+          </div>
+          <p>Fun fact the canvas contains:<span class="square-count"></span>square(s).</p>
+        </div>
+      </header>
+      <main>
+        <div class="canvas"></div>
+      </main>
+      <footer>
+        <p>
+          <a href="https://github.com/Cert-Ready" class="buttonV01">
+            <i class="fa-brands fa-github"></i> Cert-Ready
+          </a>
+        </p>
+      </footer>
     </div>
 
     <script src="./app/app.js"></script>
-</body>
+  </body>
 </html>

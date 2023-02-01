@@ -1,5 +1,200 @@
+/* google font
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/* custom variables
+   ========================================================================== */
+:root {
+  /* font */
+  --pri-font: 'Bubblegum Sans', cursive;
+  --sec-font: 'Open Sans', sans-serif;
+
+  /* size */
+  --size-1: 0.25rem;
+  --size-2: 0.5rem;
+  --size-3: 1rem;
+  --size-4: 1.25rem;
+  --size-5: 1.5rem;
+  --size-6: 1.75rem;
+  --size-7: 2rem;
+  --size-8: 3rem;
+  --size-9: 4rem;
+  --size-10: 5rem;
+  --size-11: 15rem;
+
+  /* color */
+  --light-0: hsl(210, 17%, 98%);
+  --dark-0: hsl(216, 16%, 6%);
+  --accent-0: #0081a7;
+  --accent-1: #fdfcdc;
+  --accent-2: #f07167;
+  --pri-grad: linear-gradient(45deg, var(--accent-0), var(--accent-1) 30%, var(--accent-2));
+  /* miscellaneous */
+  --pri-brd-rad: var(--size-1);
+  --pri-outline-offset: 2px;
+  --pri-transition: 250ms;
+}
+
+/* core body defaults
+   ========================================================================== */
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--sec-font);
+  background-color: var(--accent-1);
+  background-image: var(--pri-grad);
+}
+
+header,
+footer {
+  text-align: center;
+}
+
 .wrapper {
   max-width: 1000px;
-  aspect-ratio: 1 / 1;
   margin: auto;
+}
+
+/* style header
+   ========================================================================== */
+.hero {
+  font-family: var(--pri-font);
+}
+
+.controls * {
+  margin: var(--size-2);
+}
+
+/* style canvas
+   ========================================================================== */
+.canvas {
+  display: grid;
+  width: 90%;
+  aspect-ratio: 1 / 0.7;
+  margin: auto;
+  outline: 1px solid var(--accent-0);
+  border-radius: var(--pri-brd-rad);
+}
+
+/* style range input
+   ========================================================================== */
+/* style guide https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/ */
+/*range reset*/
+#grid-slider {
+  --range-pri-brd: 1px solid var(--accent-0);
+  --range-pri-outline: 1px solid var(--accent-0);
+  --range-pri-outline-offset: var(--pri-outline-offset);
+
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: var(--size-11);
+}
+
+/* removes default focus */
+#grid-slider:focus {
+  outline: none;
+}
+
+/*Chrome, Safari, Opera and Edge Chromium styles */
+/* slider track */
+#grid-slider::-webkit-slider-runnable-track {
+  background-color: var(--accent-1);
+  border-radius: var(--size-2);
+  height: var(--size-2);
+}
+
+/* slider thumb */
+#grid-slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -5px; /* Centers thumb on the track */
+
+  /*custom styles*/
+  background-color: var(--accent-2);
+  height: var(--size-4);
+  width: var(--size-3);
+  border-radius: 50%;
+}
+
+#grid-slider:focus::-webkit-slider-thumb {
+  border: var(--range-pri-brd);
+  outline: var(--range-pri-outline);
+  outline-offset: var(--range-pri-outline-offset);
+}
+
+/* Firefox styles */
+/* slider track */
+#grid-slider::-moz-range-track {
+  background-color: var(--accent-1);
+  border-radius: var(--size-2);
+  height: var(--size-2);
+}
+
+/* slider thumb */
+#grid-slider::-moz-range-thumb {
+  border: none; /*Removes extra border that FF applies*/
+  border-radius: 0; /*Removes default border-radius that FF applies*/
+
+  /*custom styles*/
+  background-color: var(--accent-2);
+  height: var(--size-4);
+  width: var(--size-3);
+  border-radius: 50%;
+}
+
+#grid-slider:focus::-moz-range-thumb {
+  border: var(--range-pri-brd);
+  outline: var(--range-pri-outline);
+  outline-offset: var(--range-pri-outline-offset);
+}
+
+/* style buttonV01
+   ========================================================================== */
+.buttonV01 {
+  background-color: var(--accent-2);
+  border-radius: var(--pri-brd-rad);
+  padding: var(--size-1) var(--size-3);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--accent-1);
+}
+
+.buttonV01:hover {
+  color: var(--dark-0);
+  background-color: var(--accent-1);
+  transition: all var(--pri-transition) ease-in-out;
+}
+
+.buttonV01:focus {
+  border-radius: var(--pri-brd-rad);
+  outline-offset: var(--pri-outline-offset);
+  outline: var(--pri-outline-offset) solid var(--accent-0);
+}
+
+/* Utility class
+   ========================================================================== */
+.flex-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+/* screen 768px and up
+========================================================================== */
+@media (min-width: 768px) {
+  .controls * {
+    margin: var(--size-1);
+  }
 }
