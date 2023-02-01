@@ -83,7 +83,6 @@ footer {
 
 /* style range input
    ========================================================================== */
-/* style guide https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/ */
 /*range reset*/
 #grid-slider {
   --range-pri-brd: 1px solid var(--accent-0);
@@ -193,6 +192,7 @@ footer {
   display: flex;
   flex-direction: column;
 }
+
 /* screen 768px and up
 ========================================================================== */
 @media (min-width: 768px) {
