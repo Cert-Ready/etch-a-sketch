@@ -22,6 +22,7 @@
   --size-9: 4rem;
   --size-10: 5rem;
   --size-11: 15rem;
+  --size-fluid-1: clamp(1rem, 2vw, 1.5rem);
 
   /* color */
   --light-0: hsl(210, 17%, 98%);
@@ -48,6 +49,7 @@ body {
   background-color: var(--accent-1);
   background-image: var(--pri-grad);
   color: var(--accent-1);
+  font-size: var(--size-fluid-1);
 }
 
 header,
@@ -58,6 +60,7 @@ footer {
 .wrapper {
   max-width: 1000px;
   margin: auto;
+  padding: var(--size-2);
 }
 
 /* style header
@@ -74,8 +77,9 @@ footer {
    ========================================================================== */
 .canvas {
   display: grid;
-  width: 90%;
+  width: 90vw;
   aspect-ratio: 1 / 1;
+  max-width: 600px;
   margin: auto;
   outline: 2px solid var(--dark-0);
   cursor: crosshair;
@@ -166,7 +170,8 @@ footer {
   color: var(--accent-1);
 }
 
-.buttonV01:hover {
+.buttonV01:hover,
+.active {
   color: var(--dark-0);
   background-color: var(--accent-1);
   transition: all var(--pri-transition) ease-in-out;
@@ -178,28 +183,22 @@ footer {
   outline: var(--pri-outline-offset) solid var(--accent-0);
 }
 
-/* Utility class
-   ========================================================================== */
-.flex-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.flex-column {
-  display: flex;
-  flex-direction: column;
-}
-
 /* screen 768px and up
 ========================================================================== */
-@media (min-width: 768px) {
+@media (min-width: 900px) {
   .controls * {
     margin: var(--size-1);
   }
 
-  .canvas {
-    aspect-ratio: 1 / 0.7;
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

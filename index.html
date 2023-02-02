@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Etch-A-Sketch</title>
+    <title>🎨 Etch-A-Sketch</title>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/normalize.css" />
     <link
@@ -22,11 +22,13 @@
         <div class="controls">
           <div class="">
             <p>Color:</p>
-            <button class="buttonV01">Classic</button>
-            <button class="buttonV01">Modern</button>
-            <button class="buttonV01">Rainbow</button>
+            <button class="buttonV01 classic-btn active">Classic</button>
+            <button class="buttonV01 modern-btn">Modern</button>
+            <button class="buttonV01 rainbow-btn">Rainbow</button>
           </div>
-          <button class="buttonV01 clear-btn">Clear</button>
+          <i class="fa-solid fa-pencil buttonV01 active"></i>
+          <i class="fa-solid fa-eraser eraser-btn buttonV01"></i>
+          <i class="fa-solid fa-trash clear-btn buttonV01"></i>
           <div>
             <label for="grid-slider">
               Grid Size: <span class="grid-size"></span>:<span class="grid-size"></span>
@@ -40,15 +42,14 @@
       <main>
         <div class="canvas"></div>
       </main>
-      <footer>
-        <p>
-          <a href="https://github.com/Cert-Ready" class="buttonV01">
-            <i class="fa-brands fa-github"></i> Cert-Ready
-          </a>
-        </p>
-      </footer>
     </div>
-
+    <footer>
+      <p>
+        <a href="https://github.com/Cert-Ready" class="buttonV01">
+          <i class="fa-brands fa-github"></i> Cert-Ready
+        </a>
+      </p>
+    </footer>
     <script src="./app/app.js"></script>
   </body>
 </html>
